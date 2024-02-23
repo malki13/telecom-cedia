@@ -35,3 +35,11 @@ spring:
           uri: lb://auth-service
           predicates:
             - Path=/auth/**
+        - id: gestion-service
+          uri: lb://gestion-service
+          predicates:
+            - Path=/gestion/**
+        - id: administracion-service
+          uri: lb://administracion-service
+          predicates:
+            - Path=/telecom-cedia/api/administracion/**

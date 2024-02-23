@@ -4,7 +4,7 @@ import com.tutorial.userservice.entity.User;
 import com.tutorial.userservice.model.Bike;
 import com.tutorial.userservice.model.Car;
 import com.tutorial.userservice.service.UserService;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+//import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
