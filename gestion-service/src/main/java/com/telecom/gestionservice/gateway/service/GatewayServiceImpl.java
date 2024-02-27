@@ -1,5 +1,8 @@
 package com.telecom.gestionservice.gateway.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.telecom.gestionservice.feing.EmpresaClient;
+import com.telecom.gestionservice.feing.data.Empresa;
 import com.telecom.gestionservice.gateway.data.dto.GatewayDTO;
 import com.telecom.gestionservice.gateway.data.entity.Gateway;
 import com.telecom.gestionservice.gateway.data.info.GatewayInfo;
@@ -21,6 +24,10 @@ public class GatewayServiceImpl implements GatewayService{
     private GatewayCrudRepository gatewayCrudRepository;
     @Autowired
     private GatewayMapper mapper;
+    @Autowired
+    private EmpresaClient empresaClient;
+    @Autowired
+    private ObjectMapper objectMapper;
     @Override
     public Page<GatewayInfo> findAll(Pageable pageable) {
         return gatewayCrudRepository.findAll(pageable).map(gateway -> mapper.toGatewayInfo(gateway));
@@ -30,11 +37,11 @@ public class GatewayServiceImpl implements GatewayService{
     public Optional<GatewayRead> getOne(Integer id) {
         Optional<Gateway> gatewayDB = gatewayCrudRepository.findById(id);
         if (gatewayDB.isPresent()) {
-//            Empresa empresa = getEmpresa(gatewayDB.get().getIdEmpresa());
-//            System.out.println("Se encuentra");
-//            System.out.println(empresa.getIden());
-//            System.out.println(empresa.getNumGateways());
-//            System.out.println(empresa.getNumDevices());
+            Empresa empresa = getEmpresa(gatewayDB.get().getIdEmpresa());
+            System.out.println("Se encuentra");
+            System.out.println(empresa.getIden());
+            System.out.println(empresa.getNumGateways());
+            System.out.println(empresa.getNumDevices());
             return gatewayCrudRepository.findById(id).map(gateway -> mapper.toGatewayRead(gateway));
 //            return gatewayDB.map(this::getGatewayData);
         }
@@ -65,5 +72,8 @@ public class GatewayServiceImpl implements GatewayService{
     @Override
     public GatewayRead update(Integer empresaId, GatewayDTO gatewayDTO, Integer id) {
         return null;
+    }
+    public Empresa getEmpresa(Integer empresaId) {
+        return objectMapper.convertValue(empresaClient.getOne(empresaId).getBody().getData(), Empresa.class);
     }
 }
