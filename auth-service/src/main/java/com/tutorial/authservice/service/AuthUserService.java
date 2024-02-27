@@ -28,13 +28,13 @@ public class AuthUserService {
         if(user.isPresent())
             return null;
         String password = passwordEncoder.encode(dto.getPassword());
+        AuthUser authUser = new AuthUser();
+        authUser.setUserName(dto.getUserName());
+        authUser.setPassword(password);
 //        AuthUser authUser = AuthUser.builder()
 //                .userName(dto.getUserName())
 //                .password(password)
 //                .build();
-        AuthUser authUser = new AuthUser();
-        authUser.setUserName(dto.getUserName());
-        authUser.setPassword(password);
         return authUserRepository.save(authUser);
     }
 

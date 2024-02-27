@@ -5,16 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 //@NoArgsConstructor
 //@AllArgsConstructor
 @Data
 //@Builder
 @Entity
+@Table(name = "tb_Usuario")
 public class AuthUser {
 
     @Id
@@ -24,6 +22,12 @@ public class AuthUser {
     private String password;
 
     public AuthUser() {
+    }
+
+    public AuthUser(int id, String userName, String password) {
+        this.id = id;
+        this.userName = userName;
+        this.password = password;
     }
 
     public int getId() {
