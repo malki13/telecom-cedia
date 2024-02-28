@@ -6,7 +6,7 @@ import com.telecom.administracionservice.estatus.data.entity.Estatus;
 import com.telecom.administracionservice.estatus.repository.EstatusCrudRepository;
 import com.telecom.administracionservice.interventor.data.entity.Interventor;
 import com.telecom.administracionservice.interventor.repository.InterventorCrudRepository;
-import com.telecom.administracionservice.response.error.BadRequestException;
+import com.telecom.administracionservice.util.response.error.BadRequestException;
 import com.telecom.administracionservice.rol.data.entity.Rol;
 import com.telecom.administracionservice.rol.repository.RolCrudRepository;
 import com.telecom.administracionservice.usuario.data.dto.UsuarioDTO;

@@ -2,7 +2,7 @@ package com.telecom.administracionservice.rol.service;
 
 import com.telecom.administracionservice.estatus.data.entity.Estatus;
 import com.telecom.administracionservice.estatus.repository.EstatusCrudRepository;
-import com.telecom.administracionservice.response.error.BadRequestException;
+import com.telecom.administracionservice.util.response.error.BadRequestException;
 import com.telecom.administracionservice.rol.data.dto.RolDTO;
 import com.telecom.administracionservice.rol.data.entity.Rol;
 import com.telecom.administracionservice.rol.data.read.RolRead;

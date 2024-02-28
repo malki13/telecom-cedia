@@ -7,7 +7,7 @@ import com.telecom.administracionservice.empresa.mapper.EmpresaMapper;
 import com.telecom.administracionservice.empresa.repository.EmpresaCrudRepository;
 import com.telecom.administracionservice.interventor.data.entity.Interventor;
 import com.telecom.administracionservice.interventor.repository.InterventorCrudRepository;
-import com.telecom.administracionservice.response.error.BadRequestException;
+import com.telecom.administracionservice.util.response.error.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

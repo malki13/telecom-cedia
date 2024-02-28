@@ -1,6 +1,7 @@
 server:
   servlet:
     contextPath: /telecom-cedia/api/administracion
+#  use-forward-headers: true
 spring:
   application:
     name: administracion-service

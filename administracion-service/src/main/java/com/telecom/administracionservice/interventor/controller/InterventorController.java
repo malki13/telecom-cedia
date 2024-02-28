@@ -3,7 +3,12 @@ package com.telecom.administracionservice.interventor.controller;
 import com.telecom.administracionservice.interventor.data.dto.InterventorDTO;
 import com.telecom.administracionservice.interventor.data.info.InterventorInfo;
 import com.telecom.administracionservice.interventor.service.InterventorService;
-import com.telecom.administracionservice.response.Response;
+import com.telecom.administracionservice.util.response.Response;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,10 +19,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/interventor")
+@Tag(name = "Interventor",description = "REST API relacionada a la entidad de Interventor")
 public class InterventorController {
     @Autowired
     private InterventorService interventorService;
     @GetMapping("/saludo/{id}")
+//    @Operation(security = {@SecurityScheme()
     public ResponseEntity<String> getById(@PathVariable("id") int id) {
         return ResponseEntity.ok("Hola"+String.valueOf(id));
     }

@@ -1,4 +1,4 @@
-package com.telecom.administracionservice.response.error;
+package com.telecom.administracionservice.util.response.error;
 
 public class ConflictException extends RuntimeException{
 

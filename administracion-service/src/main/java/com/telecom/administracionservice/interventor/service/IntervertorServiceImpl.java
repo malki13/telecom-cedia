@@ -6,7 +6,7 @@ import com.telecom.administracionservice.interventor.data.info.InterventorInfo;
 import com.telecom.administracionservice.interventor.data.read.InterventorRead;
 import com.telecom.administracionservice.interventor.mapper.InterventorMapper;
 import com.telecom.administracionservice.interventor.repository.InterventorCrudRepository;
-import com.telecom.administracionservice.response.error.BadRequestException;
+import com.telecom.administracionservice.util.response.error.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Page;

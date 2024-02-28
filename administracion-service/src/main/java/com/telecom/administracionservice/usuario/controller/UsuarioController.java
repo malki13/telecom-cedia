@@ -1,6 +1,6 @@
 package com.telecom.administracionservice.usuario.controller;
 
-import com.telecom.administracionservice.response.Response;
+import com.telecom.administracionservice.util.response.Response;
 import com.telecom.administracionservice.usuario.data.dto.UsuarioDTO;
 import com.telecom.administracionservice.usuario.data.info.UsuarioInfo;
 import com.telecom.administracionservice.usuario.service.UsuarioServiceImpl;

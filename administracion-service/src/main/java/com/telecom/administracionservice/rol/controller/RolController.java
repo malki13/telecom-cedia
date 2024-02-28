@@ -1,6 +1,6 @@
 package com.telecom.administracionservice.rol.controller;
 
-import com.telecom.administracionservice.response.Response;
+import com.telecom.administracionservice.util.response.Response;
 import com.telecom.administracionservice.rol.data.dto.RolDTO;
 import com.telecom.administracionservice.rol.data.read.RolRead;
 import com.telecom.administracionservice.rol.service.RolService;

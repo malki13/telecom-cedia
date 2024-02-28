@@ -5,7 +5,7 @@ import com.telecom.administracionservice.estatus.data.entity.Estatus;
 import com.telecom.administracionservice.estatus.data.read.EstatusRead;
 import com.telecom.administracionservice.estatus.mapper.EstatusMapper;
 import com.telecom.administracionservice.estatus.repository.EstatusCrudRepository;
-import com.telecom.administracionservice.response.error.BadRequestException;
+import com.telecom.administracionservice.util.response.error.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

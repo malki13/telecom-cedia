@@ -3,7 +3,7 @@ package com.telecom.administracionservice.estatus.controller;
 import com.telecom.administracionservice.estatus.data.dto.EstatusDTO;
 import com.telecom.administracionservice.estatus.data.read.EstatusRead;
 import com.telecom.administracionservice.estatus.service.EstatusService;
-import com.telecom.administracionservice.response.Response;
+import com.telecom.administracionservice.util.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
